@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ task.title }}</title>
+    <link rel="stylesheet" href="{% static '/styles.css' %}">
+</head>
+<body>
+    <h1>{{ task.title }}</h1>
+    <p><strong>Описание:</strong> {{ task.description }}</p>
+    <p><strong>Статус:</strong> {{ task.get_status_display }}</p>
+    <p><strong>Дата создания:</strong> {{ task.created_at }}</p>
+    <p><strong>Дата обновления:</strong> {{ task.updated_at }}</p>
+</body>
+</html>
